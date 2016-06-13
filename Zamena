@@ -1,0 +1,3 @@
+#!bin/bash
+#Поиск файлов и замена с разширением .TXT на .txt
+find . -type f -name '*.TXT'|while read fname;do  echo mv $fname ${fname/.TXT/.txt};done|bash -x
